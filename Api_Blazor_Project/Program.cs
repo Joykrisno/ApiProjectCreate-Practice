@@ -1,4 +1,10 @@
+using Api_Blazor_Project.Context;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<ApplicationDbContext>(Options => Options.UseSqlServer(builder.Configuration.GetConnectionString("DefultConnection")));
 
 // Add services to the container.
 
