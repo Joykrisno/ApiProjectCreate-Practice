@@ -24,6 +24,4 @@ namespace Api_Blazor_Project.Controllers
 
 
     }
-
-
 }
